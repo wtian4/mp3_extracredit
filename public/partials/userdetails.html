@@ -1,0 +1,40 @@
+<div class="list" ng-controller='UserDetailsController'>
+	<div class="row panel callout">
+	<div class="row"><div class="small-6 small-offset-3 text-center columns"><h2>{{user.name}}</h2></div></div>
+	<div class="row"><div class="small-6 small-offset-3 text-center columns"><h3>{{user.email}}</h3></div></div>
+    </div>
+	<div class="row"><div class="small-12 text-center columns"><h3><u>Pending Tasks</u></h3></div></div>
+	<ul><li>
+		<div class="row text-center">
+			<div class="small-5 columns"><h4>Task Name</h4></div>
+			<div class="small-5 columns"><h4>Deadline</h4></div>
+			<div class="small-2 columns"><h4>Status</h4></div>
+
+		</div>
+	</ul></li>
+
+	<ul>
+		<li ng-repeat="task in tasks">
+			<div class="row panel text-center">
+				<div class="small-5 columns"><h5>{{task.name}}</h5></div>
+				<div class="small-5 columns"><h5>{{task.deadline}}</h5></div>
+				<div class="small-2 columns"><a class="button round alert tiny" ng-click="taskiscompleted(task._id)">Completed?</a></div>
+
+			</div>
+		</div>
+		</li>
+	</ul>
+
+	<div class="row"><div class="small-6 small-offset-3 text-center columns"><a class="button radius" ng-click="showcompleted()">Show Completed Tasks</a></div></div>
+	<ul>
+		<li ng-repeat="donetask in donetasks">
+			<div class="row panel text-center">
+				<div class="small-5 columns"><h5>{{donetask.name}}</h5></div>
+				<div class="small-5 columns"><h5>{{donetask.deadline}}</h5></div>
+				<div class="small-2 columns"></div>
+
+			</div>
+		</div>
+		</li>
+	</ul>
+</div>

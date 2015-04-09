@@ -2,9 +2,11 @@
 <html lang="en" ng-app='demoApp'>
 <head>
   <meta charset="UTF-8">
-  <title>MP2 Starter</title>
+  <title>MP3 Starter</title>
   <script src="./lib/angular/angular.min.js"></script>
   <script src="./lib/angular-route/angular-route.min.js"></script>
+  <script src="./lib/angularjs-datepicker/src/js/angular-datepicker.js"></script>
+
 
   <script src="./js/app.js"></script>
   <script src="./js/controllers.js"></script>
@@ -14,18 +16,22 @@
 
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./foundation/css/foundation.css">
-  
+  <link rel="stylesheet" href="./lib/angularjs-datepicker/src/css/angular-datepicker.css"
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 
 <body>
 
-<div class="row">
+<div class="row panel">
+  <div class="small-12 text-center"><h1>Simple Task Manager</h1></div>
+  <div class="small-12 text-center">
 	<a class="button" href="#/settings">Settings</a>
-	<a class="button" href="#/llamalist">Llama List</a>
-  <a class="button" href="#/firstview">First View</a>
-  <a class="button" href="#/secondview">Second View</a>
+	<a class="button" href="#/userlist">Users</a>
+  <a class="button" href="#/tasklist">Tasks</a>
+  </div>
+
+
 </div>
 
 <div ng-view></div>

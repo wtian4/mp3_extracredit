@@ -1,0 +1,35 @@
+
+<div class="list" ng-controller='AddTaskListController'>	
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Name<span style="color: red">*</span>:
+			<input type="text" ng-model="newtask_name"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Description:
+			<input type="text" ng-model="newtask_description" ></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Deadline<span style="color: red">*</span>:
+			<datepicker>
+			<input type="text" ng-model="newtask_deadline"></input>
+		</datepicker>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Assigned User:
+			<select ng-model="newtask_assigneduser" ng-options="user._id as user.name for user in users" >
+			</select>
+		</div>
+	</div>
+	<div class="row"><div class="small-6 small-offset-3 text-center columns"><a class="button radius" ng-click="submitnewtask()">Submit</a></div></div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns"><h4>{{msg}}</h4></div>
+	</div>
+
+</div>

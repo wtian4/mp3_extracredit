@@ -1,0 +1,13 @@
+<div class="list" ng-controller='TaskDetailsController'>	
+	<div class="row"><div class="small-6 small-offset-3 columns"><h2><b>Name:</b> {{task.name}}</h2></div></div>
+	<div class="row"><div class="small-6 small-offset-3 columns"><h3><b>Deadline:</b> {{task.deadline}}</h3></div></div>
+    <div class="row"><div class="small-6 small-offset-3 columns"><h4><b>Assigned User:</b> {{task.assignedUserName}}</h3></div></div>
+	<div class="row"><div class="small-6 small-offset-3 columns"><h4><b>Completed:</b> {{task.completed}}</h3></div></div>
+	<div class="row"><div class="small-6 small-offset-3 columns"><h5><b>Description:</b> {{task.description}}</h5></div></div>
+
+	<br>
+	
+
+	<div class="row"><div class="small-4 small-offset-4 text-center columns"><a class="button radius" href="#/edittask/{{task._id}}">Edit Task</a></div></div>
+	
+</div>

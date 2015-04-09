@@ -1,5 +1,7 @@
 <div class="list" ng-controller='SettingsController'>		
 	<form>
+    <div class="row"><div class="small-12 text-center columns"><h3><u>API URL</u></h3></div></div>
+
 	  <div class="row">
           <div class="small-12 columns">
             <input ng-model="url" type="text" placeholder="URL">
@@ -10,7 +12,8 @@
       <button ng-click="setUrl()" class="button tiny info">Set URL</button>
     </div>
 
-    {{displayText}}
-
+  <div class="row">
+    <div class="small-4 small-offset-4 text-center columns"><h4>{{displayText}}</h4></div>
+  </div>
   </form>
 </div>

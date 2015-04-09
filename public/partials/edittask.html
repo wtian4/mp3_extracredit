@@ -1,0 +1,46 @@
+
+<div class="list" ng-controller='EditTaskController'>	
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Name:
+			<input type="text" ng-model="edittask_name"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Description:
+			<input type="text" ng-model="edittask_description" ></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Deadline:
+			<datepicker>
+			<input type="text" ng-model="edittask_deadline"></input>
+		</datepicker>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Assigned User:
+			<select ng-model="edittask_assigneduser" ng-options="user._id as user.name for user in users" >
+			</select>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Completed
+			<select ng-model="edittask_completed">
+				<option value="true">True</option>
+				<option value="false">False</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row"><div class="small-6 small-offset-3 text-center columns"><a class="button radius" ng-click="submitedittask()">Submit Changes</a></div></div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns"><h4>{{msg}}</h4></div>
+	</div>
+
+</div>

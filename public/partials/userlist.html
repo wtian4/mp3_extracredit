@@ -1,0 +1,18 @@
+<ng-controller='UserListController'>	
+	<div class="row"><div class="small-12 text-center columns"><h3><u>List of Users</u></h3></div></div>
+		<div class="row text-center">
+			<div class="small-5 columns"><h4>Name</h4></div>
+			<div class="small-5 columns"><h4>Email</h4></div>
+			<div class="small-2 columns"><a class="button round success tiny" href="#/adduser">Add</a></div>
+
+		</div>
+		<div ng-repeat="user in users">
+			<div class="row panel text-center">
+				<div class="small-5 columns"><h5><a href="/#/userlist/{{user._id}}">{{user.name}}</a></h5></div>
+				<div class="small-5 columns"><h5>{{user.email}}</h5></div>
+				<div class="small-2 columns"><a class="button round alert tiny" ng-click="removeUser(user._id)">Delete</a></div>
+
+			</div>
+		</div>
+		</div>
+</div>
