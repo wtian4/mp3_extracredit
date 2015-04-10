@@ -1,0 +1,20 @@
+
+<div class="list" ng-controller='AddUserListController'>	
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Name<span style="color: red">*</span>:
+			<input type="text" ng-model="newuser_name"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns">
+			Email<span style="color: red">*</span>:
+			<input type="text" ng-model="newuser_email" ></input>
+		</div>
+	</div>
+	<div class="row"><div class="small-6 small-offset-3 text-center columns"><a class="button radius" ng-click="submitnewuser()">Submit</a></div></div>
+	<div class="row">
+		<div class="small-4 small-offset-4 text-center columns"><h4>{{msg}}</h4></div>
+	</div>
+
+</div>

@@ -5,7 +5,7 @@
 		<select ng-click="change()" ng-model="sortview">
 			<option value="name">Name</option>
 			<option value="assignedUserName">Assigned User</option>
-			<option value="dateCreated">Date Created</option>
+			<option value="createdAt">Date Created</option>
 			<option value="deadline">Deadline</option>
 		</select>
 		</div>
@@ -26,7 +26,7 @@
 	</div>
 	<div class="row">
 		<div class="small-1 column"><a class="button radius small leftp" ng-click="pageleft()">Prev</a></div>
-		<div class="small-1 small-offset-10 column"><a class="button radius small rightp" ng-click="pageright()">Next</a></div>
+		<div class="small-1 small-offset-11 column"><a class="button radius small rightp" ng-click="pageright()">Next</a></div>
 
 	</div>
 	<ul><li>
@@ -43,11 +43,11 @@
 	<ul>
 		<li ng-repeat="task in tasks">
 			<div class="row panel text-center">
-				<div class="small-3 columns"><h5><a href="./#/tasklist/{{task._id}}">{{task.name}}</a></h5></div>
+				<div class="small-3 columns"><h5><a href="/#/tasklist/{{task.objectId}}">{{task.name}}</a></h5></div>
 				<div class="small-3 columns"><h5>{{task.deadline}}</h5></div>
 				<div class="small-3 columns"><h5>{{task.assignedUserName}}</h5></div>
 
-				<div class="small-3 columns"><a class="button round alert tiny" ng-click="removeTask(task._id)">Delete</a></div>
+				<div class="small-3 columns"><a class="button round alert tiny" ng-click="removeTask(task.objectId)">Delete</a></div>
 
 			</div>
 		</div>
